@@ -10,8 +10,7 @@ import Facts from "./components/facts/Facts";
 import Skill from "./components/skill/Skill";
 import Resume from "./components/portfolio/Resume";
 import ProjectList from "./components/project/ProjectList";
-import Contact from "./components/contact/Contact";
-import { Link, Element } from 'react-scroll';
+import ContactPage from "./components/contact/ContactPage";
 
 function App() {
   const [sideBar, setSideBar] = useState(false);
@@ -82,7 +81,7 @@ function App() {
             <ProjectList />
           </section>
           <section id="contact">
-            <Contact />
+            <ContactPage />
           </section>
         </main>
         <div
