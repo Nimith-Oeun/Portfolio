@@ -1,5 +1,5 @@
 import React from "react";
-import Profile from "../../../assets/profile.jpg";
+import ProfilePhoto from "../../../assets/profilePhoto.jpg";
 import facebook from "../../../assets/facebook.png";
 import twitter from "../../../assets/social.png";
 import application from "../../../assets/application.png";
@@ -11,7 +11,7 @@ function ProfileImage() {
       <div className=" rounded-full bg-slate-800 fill-slate-800 p-2 mt-5 w-[120px]">
         <img
           loading="lazy"
-          src={Profile}
+          src={ProfilePhoto}
           alt="Profile picture of O Nimith"
           className="object-cover w-full rounded-full aspect-square"
         />
