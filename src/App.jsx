@@ -54,7 +54,7 @@ function App() {
           <SideBard />
         </header>
         <main className="pl-[25%] max-lg:p-0">
-          <section id="home" className="relative bg-[url('./assets/bg.jpg')] bg-cover bg-center bg-no-repeat before:bg-[rgba(0,0,0,0.48)] before:apa before:w-full before:h-[550px] before:absolute w-full h-[550px]">
+          <section id="home" className="relative bg-[url('./assets/BG.jpg')] bg-cover bg-center bg-no-repeat before:bg-[rgba(0,0,0,0.48)] before:apa before:w-full before:h-[550px] before:absolute w-full h-[550px]">
             <article className="relative z-10 text-white h-full flex flex-col justify-center pl-16 max-sm:pl-5">
               <h1 className="text-[50px] font-poppins font-bold max-sm:text-[35px]">
                 Hi, This is <br />
