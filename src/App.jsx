@@ -49,7 +49,7 @@ function App() {
             sideBar ? "flex" : "max-lg:hidden"
           }`}
           data-aos={sideBar ? "fade-right" : "fade-left"}
-          data-aos-duration="1500"
+          data-aos-duration="700"
         >
           <SideBard />
         </header>
