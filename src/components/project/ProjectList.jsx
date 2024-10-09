@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Aos from "aos";
 import Project1 from "../../assets/Project1.png";
+import ecomerce from "../../assets/ecomerce.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
@@ -57,14 +58,18 @@ export default function ProjectList() {
               </a>  
             </div>
           </div>
-          <div className="rounded-xl xl:h-[260px] min-w-[240px] w-full cursor-pointer relative overflow-hidden group max-2xl:h-[220px]">
+          <div className="rounded-xl xl:h-[260px] min-w-[240px] w-full relative overflow-hidden group max-2xl:h-[220px]">
             <img
-              src={Project1}
+              src={ecomerce}
               alt="Jobfinder"
               className="object-fit w-full h-full rounded-xl transform transition-transform duration-500 ease-in-out group-hover:-translate-y-10"
             />
-            <div className="w-full h-full bg-teal-600 rounded-xl absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-              <h1 className="text-white text-2xl font-bold">Jobfinder</h1>
+            <div className="w-full flex-col px-5 h-full bg-teal-600 rounded-xl absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+              <h1 className="text-white text-2xl font-bold">Ecomerce</h1>
+              <p className="text-white font-poppins py-5">This website use for Sell every Product. it's powerful and make easy to finding any product that you want to buy without out your house esye payment esye buy.  </p>
+              <a href="https://jobfinder-tawny.vercel.app/" target="blank">
+              <div className="w-10 h-10 bg-white rounded-[50%] flex justify-center items-center cursor-pointer"><FontAwesomeIcon icon={faUpRightFromSquare} size="lg" className="text-teal-600" /></div>    
+              </a>  
             </div>
           </div>
           <div className="rounded-xl xl:h-[260px] min-w-[240px] w-full cursor-pointer relative overflow-hidden group max-2xl:h-[220px]">
