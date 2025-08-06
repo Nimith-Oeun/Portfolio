@@ -33,56 +33,88 @@ const AboutMe = () => {
   console.log(personalInfo);
 
   return (
-    <main className="flex overflow-hidden flex-col items-start px-14 pt-9 pb-24 bg-white max-md:px-5">
-      <h1 className="text-3xl font-bold text-black">About Me</h1>
-      <hr
-        className="w-24 h-2 rounded-full bg-teal-600"
-        {...(!isMobile && {
-          "data-aos": "fade-right",
-          "data-aos-easing": "ease-in-sine",
-          "data-aos-duration": "1000",
-          "data-aos-cout": "infinite",
-          "data-aos-delay": "1000",
-        })}
-      />
-      <p className="self-stretch mt-7 text-base text-black max-md:max-w-full">
-        Lorem ipsum is a placeholder text commonly used in the design and
-        publishing industry. It is derived from a work by Cicero and has been
-        used since the 1500s to demonstrate the visual form of a document
-        without relying on meaningful content. If you need a sample or have a
-        specific request related to lorem ipsum, please let me know!
-      </p>
-      <section className="mt-11 max-md:mt-10 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col">
-          <ProfileImage />
-          <div className="flex flex-col ml-5 w-[63%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
-              <h2 className="text-3xl font-bold text-teal-600">
-                Front-End Developer
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 px-6 py-16 lg:px-14">
+      {/* Header Section */}
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#00A78E] to-teal-700 bg-clip-text text-transparent mb-4">
+            About Me
+          </h1>
+          <div 
+            className="w-24 h-1 bg-gradient-to-r from-[#00A78E] to-teal-600 mx-auto rounded-full mb-6"
+            {...(!isMobile && {
+              "data-aos": "fade-up",
+              "data-aos-duration": "800",
+              "data-aos-delay": "200",
+            })}
+          />
+          <p className="text-gray-600 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
+            Passionate about creating beautiful, functional, and user-centered digital experiences. 
+            I combine technical expertise with creative vision to bring ideas to life through code.
+          </p>
+        </div>
+
+        {/* Main Content Section */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          {/* Profile Image with Modern Card */}
+          <div 
+            className="relative"
+            {...(!isMobile && {
+              "data-aos": "fade-right",
+              "data-aos-duration": "1000",
+              "data-aos-delay": "400",
+            })}
+          >
+            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100 hover:shadow-3xl transition-all duration-500">
+              <div className="relative">
+                <ProfileImage />
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-[#00A78E] to-teal-600 rounded-2xl flex items-center justify-center shadow-lg">
+                  <span className="text-white font-bold text-xl">👋</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Information Section */}
+          <div 
+            className="space-y-8"
+            {...(!isMobile && {
+              "data-aos": "fade-left",
+              "data-aos-duration": "1000",
+              "data-aos-delay": "600",
+            })}
+          >
+            {/* Role Title */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-3">
+                Back-End Developer
               </h2>
-              <p className="self-stretch mt-1.5 text-base text-black max-md:max-w-full">
-                Lorem ipsum is a placeholder text commonly used in the design
-                and publishing industry. It is derived from a work by Cicero and
-                has been
+              <div className="w-16 h-1 bg-gradient-to-r from-[#00A78E] to-teal-600 rounded-full mb-4"></div>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Crafting modern web experiences with cutting-edge technologies and design principles. 
+                Specialized in React, JavaScript, and responsive design to deliver exceptional user interfaces.
               </p>
-              <div className="flex gap-10 mt-5 max-w-full font-medium max-sm:flex-col max-sm:gap-0 ">
-                <div className="flex flex-col items-start">
+            </div>
+
+            {/* Personal Information Cards */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center">
+                <span className="w-2 h-2 bg-[#00A78E] rounded-full mr-3"></span>
+                Personal Information
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
                   {personalInfo
                     .slice(0, 4)
-                    .map(
-                      (item, index) => (
-                        console.warn(item.value),
-                        (
-                          <InfoItem
-                            key={index}
-                            label={item.label}
-                            value={item.value}
-                          />
-                        )
-                      )
-                    )}
+                    .map((item, index) => (
+                      <InfoItem
+                        key={index}
+                        label={item.label}
+                        value={item.value}
+                      />
+                    ))}
                 </div>
-                <div className="flex flex-col flex-1 items-start">
+                <div className="space-y-4">
                   {personalInfo.slice(4).map((item, index) => (
                     <InfoItem
                       key={index + 4}
@@ -93,9 +125,20 @@ const AboutMe = () => {
                 </div>
               </div>
             </div>
+
+            {/* Call to Action */}
+            <div className="bg-gradient-to-r from-[#00A78E] to-teal-600 rounded-2xl p-6 text-white">
+              <h3 className="text-xl font-semibold mb-3">Let's Work Together</h3>
+              <p className="text-teal-100 mb-4">
+                Ready to bring your ideas to life? Let's create something amazing together.
+              </p>
+              <button className="bg-white text-[#00A78E] px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+                Get In Touch
+              </button>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 };
